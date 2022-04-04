@@ -1,7 +1,7 @@
 const express = require('express');
 const env = require('dotenv');
 const bodyParser = require('body-parser');
-const { authRouter } = require('../src/routes/authService.routes');
+const { authRouter } = require('./routes/authService.routes');
 
 env.config();
 

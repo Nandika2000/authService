@@ -10,7 +10,9 @@ const schema = Joi.object({
   password: Joi.string().regex(/^[A-Z,a-z,]+$/).required(),
 });
 
-router.post('/login-details',validator.body(schema), handler.loginValidator);
+router.post('/login-details', validator.body(schema), handler.loginValidator);
+router.post('/signUp', validator.body(schema), handler.createUser);
+router.get('/validateToken', handler.tokenValidator);
 
 module.exports = {
   authRouter: router,
