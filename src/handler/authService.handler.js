@@ -31,6 +31,7 @@ const tokenValidator = async (req, res) => {
     res.status(err.code).json({ message: err.message });
   }
 };
+
 module.exports = {
   loginValidator,
   createUser,
